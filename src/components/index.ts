@@ -1,0 +1,1 @@
+export { SimpleSpinner } from "./spinner";

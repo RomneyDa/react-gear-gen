@@ -1,0 +1,31 @@
+{
+  "name": "react-gear-gen",
+  "version": "1.0.0",
+  "description": "A library for displaying gear patterns in react",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RomneyDa/react-gear-gen.git"
+  },
+  "keywords": [
+    "gears",
+    "gear"
+  ],
+  "author": "Dallin Romney",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RomneyDa/react-gear-gen/issues"
+  },
+  "homepage": "https://github.com/RomneyDa/react-gear-gen#readme",
+  "devDependencies": {
+    "@types/react": "^18.2.20",
+    "react": "^18.2.0",
+    "typescript": "^5.1.6"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/romneyda"
+  }
+}
