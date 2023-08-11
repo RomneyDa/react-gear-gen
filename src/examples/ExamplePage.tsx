@@ -27,7 +27,6 @@ function ExamplePage() {
             <button className="download-button" onClick={() => { gearSet1.gears[0].downloadDXF() }}>Download dxf</button>
           </div>
         </div>}
-
       </div>
       {gearSet2 && <div>
         <PositionedGearSetViewer gearSet={gearSet2} rot={0} showGrid={false} />
