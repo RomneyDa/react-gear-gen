@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     // Default
-    "target": "es2016", 
+    "target": "es6", 
     "esModuleInterop": true, 
     "forceConsistentCasingInFileNames": true,
     "strict": true, 
@@ -9,7 +9,7 @@
 
     // Added
     "jsx": "react", 
-    "module": "ES2022",  
+    "module": "es6",  
     "declaration": true,
     "sourceMap": true,
     "outDir": "./dist",

@@ -28,6 +28,6 @@
     "typescript": "^5.1.6"
   },
   "dependencies": {
-    "@dromney/gear-gen": "^0.2.5"
+    "@dromney/gear-gen": "^0.2.6"
   }
 }
