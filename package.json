@@ -1,6 +1,6 @@
 {
   "name": "@dromney/react-gear-gen",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "A library for displaying gear patterns in react",
   "main": "index.js",
   "types": "index.d.ts",

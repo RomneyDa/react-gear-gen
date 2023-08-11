@@ -19,7 +19,7 @@ function PositionedGearSetViewer({ gearSet, rot, showGrid }: { gearSet: GearSet,
             backgroundImage: backgroundGridURL,
             display: 'flex',
             flexDirection: 'column',
-            padding: '12rem',
+            padding: '3rem',
             flex: '1 1 0%',
         }}>
             <div style={{
