@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { PositionedGearSetViewer } from '../components';
 import { GearSet, RandomBackAndForth } from '@dromney/gear-gen';
-import '@dromney/gear-gen/dist/styles/bluey.css'
 import '../styles/examples.css'
 
 function ExampleRandomGears() {
@@ -11,7 +10,7 @@ function ExampleRandomGears() {
     }, [])
     if (!gearSet) return null
     return (
-        <PositionedGearSetViewer gearSet={gearSet} rot={0} showGrid={false} />
+        <PositionedGearSetViewer gearSet={gearSet} rot={0} showGrid={false} padding={10} />
     )
 }
 
