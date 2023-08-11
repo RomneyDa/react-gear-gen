@@ -4,6 +4,7 @@ import ExampleGearSet from './ExampleGearSet';
 import ExampleRandomGears from './ExampleRandomGears';
 import ExampleSpinners from './ExampleSpinners';
 import '../styles/examples.css'
+import '@dromney/gear-gen/dist/styles/dark.css'
 
 function ExamplePage() {
   const [gearSet1, setGearSet1] = useState<GearSet>()
