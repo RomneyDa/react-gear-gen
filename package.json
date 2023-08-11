@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc && npm run copy-styles",
+    "build": "clean && tsc && npm run copy-styles",
     "clean": "rm -rf ./dist/**",
     "copy-styles": "mkdir ./dist/styles && cp ./src/styles/** ./dist/styles"
   },
