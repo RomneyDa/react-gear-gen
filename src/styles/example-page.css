@@ -1,0 +1,35 @@
+.top-row {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    min-width: 100vw;
+    gap: 3rem;
+    flex: 1 1 0%;
+}
+
+.simple-spinners {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.mouse-set {
+    display: flex;
+    flex-direction: column;
+}
+
+.download-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    align-items: center;
+}
+
+.download-button {
+    width: 40rem;
+    border-radius: 9999px;
+    background-color: #d1d5db;
+}

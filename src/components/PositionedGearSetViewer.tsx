@@ -15,19 +15,26 @@ function PositionedGearSetViewer({ gearSet, rot, showGrid }: { gearSet: GearSet,
         return gearSet.dimensions
     }, [gearSet.gears])
     return (
-        <div className="gear-view flex flex-1 p-12" style={{
+        <div className="gear-view" style={{
             backgroundImage: backgroundGridURL,
+            display: 'flex',
+            flexDirection: 'column',
+            padding: '12rem',
+            flex: '1 1 0%',
         }}>
-            <div className="flex-1 relative" style={{
+            <div style={{
                 height: size.h + 'px',
                 width: size.w + 'px',
+                flex: '1 1 0%',
+                position: 'relative'
             }}>
                 {gearSet.gears.map((gear, i) => {
                     if (!gear) return null
                     return (
-                        <div key={i} className="absolute" dangerouslySetInnerHTML={{ __html: gear.svg }} style={{
+                        <div key={i} dangerouslySetInnerHTML={{ __html: gear.svg }} style={{
                             transform: `translate(${gear.svgOffsetX}px,${gear.svgOffsetY}px) rotate(${fix6(gear.getRot(rot) + gear.baseAngle)}deg)`,
-                            zIndex: gear.layer
+                            zIndex: gear.layer,
+                            position: 'absolute',
                         }} />
                     )
                 })}
