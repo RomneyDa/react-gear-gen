@@ -26,7 +26,6 @@ function PositionedGearSetViewer({ gearSet, rot, showGrid }: { gearSet: GearSet,
             <div style={{
                 height: size.h + 'px',
                 width: size.w + 'px',
-                flex: '1 1 0%',
                 position: 'relative'
             }}>
                 {gearSet.gears.map((gear, i) => {
