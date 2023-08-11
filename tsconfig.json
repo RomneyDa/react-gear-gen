@@ -1,20 +1,17 @@
 {
   "compilerOptions": {
-    // Default
     "target": "es6", 
+    "module": "es6",  
+    "declaration": true,
+    "outDir": "./dist",
     "esModuleInterop": true, 
     "forceConsistentCasingInFileNames": true,
     "strict": true, 
     "skipLibCheck": true,
-
-    // Added
     "jsx": "react", 
-    "module": "es6",  
-    "declaration": true,
     "sourceMap": true,
-    "outDir": "./dist",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "emitDeclarationOnly": true,
+    // "emitDeclarationOnly": true,
   }
 }
