@@ -1,6 +1,6 @@
 import React from "react"
 import { Gear } from "@dromney/gear-gen"
-import "./spin.css"
+import "../../styles/spin.css"
 
 function SimpleSpinner({ gear, rpm }: { gear?: Gear, rpm: number }) {
     if (!gear) return null

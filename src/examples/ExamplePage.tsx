@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { MouseGearSetViewer, PositionedGearSetViewer, SimpleSpinner } from '../components';
 import { ExampleGears, GearSet, RandomBackAndForth } from '@dromney/gear-gen';
-
-import "./styles/dark.css"
+import '@dromney/gear-gen/dist/styles/dark.css'
 
 function ExamplePage() {
   const [gearSet1, setGearSet1] = useState<GearSet>()
