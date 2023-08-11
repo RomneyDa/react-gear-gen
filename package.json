@@ -7,13 +7,13 @@
   "files": [
     "dist"
   ],
-  "prepublish": "npm run build",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run clean && tsc && npm run copy-styles",
-    "clean": "rm -rf ./dist",
+    "build": "tsc && npm run copy-styles",
+    "clean": "rm -rf ./dist/**",
     "copy-styles": "mkdir ./dist/styles && cp ./src/styles/** ./dist/styles"
   },
+  "prepublish": "npm run build",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RomneyDa/react-gear-gen.git"
@@ -34,6 +34,6 @@
     "typescript": "^5.1.6"
   },
   "dependencies": {
-    "@dromney/gear-gen": "^0.2.6"
+    "@dromney/gear-gen": "^0.2.7"
   }
 }

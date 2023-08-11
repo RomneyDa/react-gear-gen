@@ -1,16 +1,16 @@
 {
   "compilerOptions": {
     "target": "es6", 
-    "module": "es6",  
+    "module": "CommonJS",  
     "declaration": true,
     "outDir": "./dist",
     "esModuleInterop": true, 
     "forceConsistentCasingInFileNames": true,
     "strict": true, 
-    "skipLibCheck": true,
+    "skipLibCheck": false,
+    "moduleResolution": "node",
     "jsx": "react", 
     // "sourceMap": true,
-    "moduleResolution": "node",
     // "allowSyntheticDefaultImports": true,
     // "emitDeclarationOnly": true,
   }

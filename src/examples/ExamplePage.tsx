@@ -13,18 +13,18 @@ function ExamplePage() {
   }, [])
 
   return (
-    <div>
-      <div className="top-row">
-        <div className="simple-spinners">
+    <div className="gear-example-main">
+      <div className="gear-example-top-row">
+        <div className="gear-example-simple-spinners">
           <SimpleSpinner gear={gearSet1?.gears.find(g => g.internal)} rpm={3} />
           <SimpleSpinner gear={gearSet1?.gears[2]} rpm={8} />
         </div>
-        {gearSet1 && <div className="mouse-set">
+        {gearSet1 && <div className="gear-example-mouse-set">
           <MouseGearSetViewer gearSet={gearSet1} showGrid={true} />
-          <div className="download-buttons">
-            <button className="download-button" onClick={() => { gearSet1?.downloadAllSVGs(50) }}>Download all</button>
-            <button className="download-button" onClick={() => { gearSet1.gears[0].downloadSVG() }}>Download first</button>
-            <button className="download-button" onClick={() => { gearSet1.gears[0].downloadDXF() }}>Download dxf</button>
+          <div className="gear-example-download-buttons">
+            <button className="gear-example-download-button" onClick={() => { gearSet1?.downloadAllSVGs(50) }}>Download all</button>
+            <button className="gear-example-download-button" onClick={() => { gearSet1.gears[0].downloadSVG() }}>Download first</button>
+            <button className="gear-example-download-button" onClick={() => { gearSet1.gears[0].downloadDXF() }}>Download dxf</button>
           </div>
         </div>}
       </div>
