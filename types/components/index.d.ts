@@ -1,1 +1,0 @@
-export { SimpleSpinner } from "./spinner";
