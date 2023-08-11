@@ -1,6 +1,7 @@
 
 import React, { useMemo } from "react";
 import { GearSet, fix6, createSVGgrid } from "@dromney/gear-gen"
+import "../styles/svg-fix.css"
 
 function PositionedGearSetViewer({ gearSet, rot, showGrid }: { gearSet: GearSet, rot: number, showGrid?: boolean }) {
     const backgroundGridURL = useMemo(() => {
@@ -32,7 +33,6 @@ function PositionedGearSetViewer({ gearSet, rot, showGrid }: { gearSet: GearSet,
                     if (!gear) return null
                     return (
                         <div key={i} dangerouslySetInnerHTML={{ __html: gear.svg }} style={{
-                            transformOrigin: 'center',
                             transform: `translate(${gear.svgOffsetX}px,${gear.svgOffsetY}px) rotate(${fix6(gear.getRot(rot) + gear.baseAngle)}deg)`,
                             zIndex: gear.layer,
                             position: 'absolute',
