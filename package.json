@@ -34,6 +34,7 @@
     "typescript": "^5.1.6"
   },
   "dependencies": {
-    "@dromney/gear-gen": "^0.2.7"
+    "@dromney/gear-gen": "^0.2.7",
+    "react-device-detect": "^2.2.3"
   }
 }
