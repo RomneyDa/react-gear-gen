@@ -8,7 +8,7 @@ import '@dromney/gear-gen/dist/styles/dark.css'
 function ExamplePage({ isMobile = false }: { isMobile?: boolean }) {
   return (
     <div className="gear-example-main">
-      <ExampleGearSet isMobile={isMobile} />
+      <ExampleGearSet spin={isMobile} />
       <ExampleSpinners />
       <ExampleRandomGears />
     </div>
