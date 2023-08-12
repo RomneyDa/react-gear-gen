@@ -1,20 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import { ExampleGears, GearSet } from '@dromney/gear-gen';
+import React from 'react';
 import ExampleGearSet from './ExampleGearSet';
 import ExampleRandomGears from './ExampleRandomGears';
 import ExampleSpinners from './ExampleSpinners';
 import '../styles/examples.css'
 import '@dromney/gear-gen/dist/styles/dark.css'
 
-function ExamplePage() {
-  const [gearSet1, setGearSet1] = useState<GearSet>()
-  useEffect(() => {
-    setGearSet1(new GearSet(ExampleGears()))
-  }, [])
-  if (!gearSet1) return null
+function ExamplePage({ isMobile = false }: { isMobile?: boolean }) {
   return (
     <div className="gear-example-main">
-      <ExampleGearSet />
+      <ExampleGearSet isMobile={isMobile} />
       <ExampleSpinners />
       <ExampleRandomGears />
     </div>
