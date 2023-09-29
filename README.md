@@ -12,6 +12,8 @@ See [@dromney/gear-gen](github.com/romneyda/gear-gen) ReadMe for more specific `
 ## Examples
 Example components that use one of the below components to display a Gear or Gearset imported from the @dromney/gear-gen examples/generators can be found in [src/examples](https://github.com/RomneyDa/react-gear-gen/tree/main/src/examples)
 
+The repo [@dromney/react-gear-gen-example](github.com/romneyda/react-gear-gen-example) is a live-hosted example of this package
+
 ### SimpleSpinner
 The `SimpleSpinner` component takes a `gear` and `rpm` as props and displays the gear spinning at that rpm.
 
