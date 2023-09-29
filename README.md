@@ -16,32 +16,72 @@ The `SimpleSpinner` component takes a `gear` and `rpm` as props and displays the
 
 ```typescript
 import React, { useEffect, useState } from 'react';
-import { SimpleSpinner } from '../components';
+import { SimpleSpinner } from '@dromney/react-gear-gen';
 import { ExampleGears } from '@dromney/gear-gen';
 
-export default function ExampleSpinner() {
+export default function ExampleSimpleSpinner() {
     return <SimpleSpinner gear={ExampleGears[2]} rpm={8} />
 }
 ```
 
 ### PositionedGearSetViewer
 The `PositionedGearSetViewer` component takes the following props:
-- gearSet (required): `GearSet`
-- rot (optional, default `0`): number used to animate the `GearSet` or give a fixed angle of rotation of the parent gear. Degrees
-- showGrid (optional, default `false`): boolean - if true, displays a grid in the background
-- padding (optional default `0`): number that adds visual padding to the `GearSet` display. Pixels
+- `gearSet` (required): `GearSet`
+- `rot` (optional, default `0`): number used to animate the `GearSet` or give a fixed angle of rotation of the parent gear. Degrees
+- `showGrid` (optional, default `false`): boolean - if true, displays a grid in the background
+- `padding` (optional default `0`): number that adds visual padding to the `GearSet` display. Pixels
+
+The following example uses an example randomly generated gearset:
+```typescript
+import React, { useEffect, useState } from 'react';
+import { PositionedGearSetViewer } from '@dromney/react-gear-gen';
+import { GearSet, RandomBackAndForth } from '@dromney/gear-gen';
+
+export default function ExamplePositionedGearSetViewer() {
+    const [gearSet, setGearSet] = useState<GearSet>()
+    useEffect(() => {
+        setGearSet(new GearSet(RandomBackAndForth(10)))
+    }, [])
+    if (!gearSet) return null
+    return <PositionedGearSetViewer gearSet={gearSet} rot={0} showGrid={false} padding={10} />
+}
+```
 
 ### SpinningGearSetViewer
 The `SpinningGearSetViewer` component is a wrapper around the `PositionedGearSetViewer` that takes a speed and optional update frequency. Instead of `rot`, it takes:
-- rpm (required): the speed in RPM at which to rotate the parent gear
-- fps (optional, default 60): visual update frequency in Hz
+- `rpm` (required): the speed in RPM at which to rotate the parent gear
+- `fps` (optional, default 60): visual update frequency in Hz
 and generates `rot`. It accepts `gearSet`, `showGrid`, and `padding` as described for the `PositionedGearSetViewer`.
 
-### MouseGearSetViewer
+The following example uses the `ExampleGears` from `@dromney/gear-gen`:
+```typescript
+import React, { useEffect, useState } from 'react';
+import { ExampleGears, GearSet } from '@dromney/gear-gen';
+import SpinningGearSetViewer from '@dromney/react-gear-gen';
 
+function ExampleGearSet({ spin = false }: { spin?: boolean }) {
+    const [gearSet, setGearSet] = useState<GearSet>()
+    useEffect(() => {
+        setGearSet(new GearSet(ExampleGears()))
+    }, [])
+    if (!gearSet) return null
+    return <SpinningGearSetViewer spin={spin} gearSet={gearSet} showGrid={true} padding={3} rpm={20} />
+}
+```
+
+### MouseGearSetViewer
+```typescript
+// ...(otherwise same as above MouseGearSetViewer)
+    return <SpinningOrMouseGearSetViewer spin={spin} gearSet={gearSet} showGrid={true} padding={3} rpm={20} />
+```
+TODO: add sensitivity prop to adjust how fast the gears move with the mouse
 
 ### SpinningOrMouseGearSetViewer
-
+The `SpinningOrMouseGearSetViewer` component is a wrapper around both the `MouseGearSetViewer` and `SpinningGearSetViewer` components that also accepts a `spin` prop. If `spin` is true, it displays the `SpinningGearSetViewer`, otherwise, it returns the `MouseGearSetViewer`. This is specifically useful for displaying a spinner on mobile devices and a more responsive mouse viewer on devices with a mouse.
+```typescript
+// ...(otherwise same as above MouseGearSetViewer)
+    return <SpinningOrMouseGearSetViewer spin={spin} gearSet={gearSet} showGrid={true} padding={3} rpm={20} />
+```
 
 ## Examples
 
