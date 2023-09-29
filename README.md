@@ -9,9 +9,8 @@ This package contains several components that can be used to display a single `G
 
 See [@dromney/gear-gen](github.com/romneyda/gear-gen) ReadMe for more specific `Gear`, `Gearset`, generators, and styles usage
 
-Example components that use one of the below components to display a Gear or Gearset imported from the @dromney/gear-gen examples/generators can be found in [src/examples](https://github.com/RomneyDa/react-gear-gen/tree/main/src/examples)
-
 ## Examples
+Example components that use one of the below components to display a Gear or Gearset imported from the @dromney/gear-gen examples/generators can be found in [src/examples](https://github.com/RomneyDa/react-gear-gen/tree/main/src/examples)
 
 ### SimpleSpinner
 The `SimpleSpinner` component takes a `gear` and `rpm` as props and displays the gear spinning at that rpm.
