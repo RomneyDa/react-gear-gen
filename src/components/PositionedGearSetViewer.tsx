@@ -3,7 +3,7 @@ import React, { useMemo } from "react";
 import { GearSet, fix6, createSVGgrid } from "@dromney/gear-gen"
 import "../styles/svg-fix.css"
 
-function PositionedGearSetViewer({ gearSet, rot, showGrid, padding = 0 }: { gearSet: GearSet, rot: number, showGrid?: boolean, padding?: number }) {
+function PositionedGearSetViewer({ gearSet, rot = 0, showGrid = false, padding = 0 }: { gearSet: GearSet, rot: number, showGrid?: boolean, padding?: number }) {
     const backgroundGridURL = useMemo(() => {
         if (!showGrid) return undefined
         if (!gearSet.gears.length) return undefined
