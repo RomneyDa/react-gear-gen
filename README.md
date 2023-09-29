@@ -4,12 +4,14 @@ A typescript npm package that provides components and hooks for using the [@drom
 ## Installation
 ### `npm install @dromney/react-gear-gen`
 
-## How it works
-This package contains several components that can be used to display a single Gear or Gearset, along with useful hooks.
+## What it does
+This package contains several components that can be used to display a single `Gear` or `Gearset`, along with useful hooks.
 
-See [@dromney/gear-gen](github.com/romneyda/gear-gen) readme for more specific `Gear`, `Gearset`, generators, and styles usage
+See [@dromney/gear-gen](github.com/romneyda/gear-gen) ReadMe for more specific `Gear`, `Gearset`, generators, and styles usage
 
 Example components that use one of the below components to display a Gear or Gearset imported from the @dromney/gear-gen examples/generators can be found in [src/examples](https://github.com/RomneyDa/react-gear-gen/tree/main/src/examples)
+
+## Examples
 
 ### SimpleSpinner
 The `SimpleSpinner` component takes a `gear` and `rpm` as props and displays the gear spinning at that rpm.
@@ -59,36 +61,35 @@ import React, { useEffect, useState } from 'react';
 import { ExampleGears, GearSet } from '@dromney/gear-gen';
 import SpinningGearSetViewer from '@dromney/react-gear-gen';
 
-function ExampleGearSet({ spin = false }: { spin?: boolean }) {
+function ExampleSpinningGearSet({ spin = false }: { spin?: boolean }) {
     const [gearSet, setGearSet] = useState<GearSet>()
     useEffect(() => {
         setGearSet(new GearSet(ExampleGears()))
     }, [])
     if (!gearSet) return null
-    return <SpinningGearSetViewer spin={spin} gearSet={gearSet} showGrid={true} padding={3} rpm={20} />
+    return <SpinningGearSetViewer gearSet={gearSet} showGrid={true} padding={3} rpm={20} />
 }
 ```
 
 ### MouseGearSetViewer
+The `MouseGearSetViewer` component is another wrapper around the `PositionedGearSetViewer` that animates gears using movement of the mouse. So it accepts `gearSet`, `showGrid`, and `padding` as described for the `PositionedGearSetViewer`, but does NOT take the `rot` prop. The mouse movement hook is included in the library.
+
+Example
 ```typescript
-// ...(otherwise same as above MouseGearSetViewer)
-    return <SpinningOrMouseGearSetViewer spin={spin} gearSet={gearSet} showGrid={true} padding={3} rpm={20} />
+// ...(otherwise similar to above SpinningGearSetViewer)
+    return <MouseGearSetViewer gearSet={gearSet} showGrid={false} />
 ```
-TODO: add sensitivity prop to adjust how fast the gears move with the mouse
 
 ### SpinningOrMouseGearSetViewer
 The `SpinningOrMouseGearSetViewer` component is a wrapper around both the `MouseGearSetViewer` and `SpinningGearSetViewer` components that also accepts a `spin` prop. If `spin` is true, it displays the `SpinningGearSetViewer`, otherwise, it returns the `MouseGearSetViewer`. This is specifically useful for displaying a spinner on mobile devices and a more responsive mouse viewer on devices with a mouse.
 ```typescript
-// ...(otherwise same as above MouseGearSetViewer)
+// ...(otherwise similar to above SpinningGearSetViewer)
     return <SpinningOrMouseGearSetViewer spin={spin} gearSet={gearSet} showGrid={true} padding={3} rpm={20} />
-```
-
-## Examples
-
 
 
 ```
 
-```
+
+
 
 
