@@ -4,7 +4,7 @@ A typescript npm package that provides components and hooks for using the [@drom
 ## Installation
 ### `npm install @dromney/react-gear-gen`
 
-## What it does
+## Intro
 This package contains several components that can be used to display a single `Gear` or `Gearset`, along with useful hooks.
 
 See [@dromney/gear-gen](github.com/romneyda/gear-gen) ReadMe for more specific `Gear`, `Gearset`, generators, and styles usage
@@ -75,7 +75,7 @@ function ExampleSpinningGearSet({ spin = false }: { spin?: boolean }) {
 ### MouseGearSetViewer
 The `MouseGearSetViewer` component is another wrapper around the `PositionedGearSetViewer` that animates gears using movement of the mouse. So it accepts `gearSet`, `showGrid`, and `padding` as described for the `PositionedGearSetViewer`, but does NOT take the `rot` prop. The mouse movement hook is included in the library.
 
-Example
+Example:
 ```typescript
 // ...(otherwise similar to above SpinningGearSetViewer)
     return <MouseGearSetViewer gearSet={gearSet} showGrid={false} />
@@ -86,8 +86,6 @@ The `SpinningOrMouseGearSetViewer` component is a wrapper around both the `Mouse
 ```typescript
 // ...(otherwise similar to above SpinningGearSetViewer)
     return <SpinningOrMouseGearSetViewer spin={spin} gearSet={gearSet} showGrid={true} padding={3} rpm={20} />
-
-
 ```
 
 
