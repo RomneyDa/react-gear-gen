@@ -23,7 +23,7 @@ import { SimpleSpinner } from '@dromney/react-gear-gen';
 import { ExampleGears } from '@dromney/gear-gen';
 
 export default function ExampleSimpleSpinner() {
-    return <SimpleSpinner gear={ExampleGears[2]} rpm={8} />
+    return <SimpleSpinner gear={ExampleGears()[2]} rpm={8} />
 }
 ```
 
