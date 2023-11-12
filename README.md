@@ -7,12 +7,12 @@ A typescript npm package that provides components and hooks for using the [@drom
 ## Intro
 This package contains several components that can be used to display a single `Gear` or `Gearset`, along with useful hooks.
 
-See [@dromney/gear-gen](github.com/romneyda/gear-gen) ReadMe for more specific `Gear`, `Gearset`, generators, and styles usage
+See [@dromney/gear-gen](https://github.com/romneyda/gear-gen) ReadMe for more specific `Gear`, `Gearset`, generators, and styles usage
 
 ## Examples
 Example components that use one of the below components to display a Gear or Gearset imported from the @dromney/gear-gen examples/generators can be found in [src/examples](https://github.com/RomneyDa/react-gear-gen/tree/main/src/examples)
 
-The repo [@dromney/react-gear-gen-example](github.com/romneyda/react-gear-gen-example) is a live-hosted example of this package
+The repo [@dromney/react-gear-gen-example](https://github.com/romneyda/react-gear-gen-example) is a live-hosted example of this package (hosted [here](https://incomparable-biscotti-92aa2f.netlify.app/))
 
 ### SimpleSpinner
 The `SimpleSpinner` component takes a `gear` and `rpm` as props and displays the gear spinning at that rpm.
