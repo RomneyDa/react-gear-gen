@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ExampleGears, GearSet } from '@dromney/gear-gen';
 import SpinningOrMouseGearSetViewer from '../components/SpinningOrMouseGearSetViewer';
-import '../styles/examples.css'
+// import '../styles/examples.css'
 
 function ExampleGearSet({ spin = false }: { spin?: boolean }) {
     const [gearSet, setGearSet] = useState<GearSet>()
