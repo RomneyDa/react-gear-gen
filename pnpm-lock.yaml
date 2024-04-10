@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@dromney/gear-gen':
-    specifier: ^0.2.7
-    version: 0.2.8
+    specifier: ^0.2.11
+    version: 0.2.11
   gear-gen:
     specifier: link:@#dromney/gear-gen
     version: link:@#dromney/gear-gen
@@ -25,8 +25,8 @@ devDependencies:
 
 packages:
 
-  /@dromney/gear-gen@0.2.8:
-    resolution: {integrity: sha512-4v30k/fUqIDxL5f1jjA2nUtkm7i0SILZLnYqrY16Nzvcm7ZBobtmOK4zj7OBmEFueKicmo8PWDyAGklMSjz9Lw==}
+  /@dromney/gear-gen@0.2.11:
+    resolution: {integrity: sha512-ELNS5CN7qqq1HAfwa0/s2yiGkmbVD52uAYuqWdhIIsNCnz4CQOYpJDmXlkyBHS2Lg1eW6Tf75fEh9hJdZEV15g==}
     dev: false
 
   /@types/prop-types@15.7.12:
