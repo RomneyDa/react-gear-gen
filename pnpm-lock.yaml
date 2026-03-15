@@ -11,9 +11,6 @@ importers:
       '@dromney/gear-gen':
         specifier: ^0.2.11
         version: 0.2.11
-      gear-gen:
-        specifier: link:@#dromney/gear-gen
-        version: link:@#dromney/gear-gen
     devDependencies:
       '@types/react':
         specifier: ^18.2.20
